@@ -1,0 +1,5 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+.btn{@apply inline-block px-5 py-2.5 bg-ink text-white text-sm text-center transition hover:bg-gold disabled:opacity-40}
+.btn2{@apply inline-block px-5 py-2.5 border border-ink text-sm text-center transition hover:border-gold hover:text-gold}
+.inp{@apply w-full border border-neutral-300 px-3 py-2 text-sm outline-none focus:border-gold}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
