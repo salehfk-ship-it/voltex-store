@@ -16,6 +16,7 @@ export default function Home(){
     <p className="mt-4 text-white/80 max-w-md">{h.subtitle}</p><Link href="/products" className="btn mt-8 !bg-gold hover:!bg-white hover:!text-ink">تسوق الآن</Link></div></section>
   <div className="max-w-6xl mx-auto px-4 space-y-16 mt-14">
    {secs.map(([t,f])=>{const l=ps.filter(f).slice(0,4);return l.length?<section key={t}><h2 className="text-2xl font-bold mb-6">{t}</h2><Grid list={l}/></section>:null})}
+   {ps.length? <section><h2 className="text-2xl font-bold mb-6">كل المنتجات</h2><Grid list={ps}/></section> : null}
    <section><h2 className="text-2xl font-bold mb-6">تسوق حسب التصنيف</h2><div className="flex flex-wrap gap-3">
     {cs.map(c=><Link key={c.id} href={'/products?q='+encodeURIComponent(c.name_ar)} className="btn2">{c.name_ar}</Link>)}</div></section>
    <section className="bg-ink text-center text-white py-14 px-4"><h2 className="text-2xl text-gold font-bold">جاهز لتجديد إضاءة منزلك؟</h2>
